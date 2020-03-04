@@ -41,11 +41,9 @@ end
 
 def winner(board)
 winners = won?(board)
-if board[winners[0]] == "X"
-return "X"
-elsif board[winners[0]] == "O"
-return "O"
-else won?(board) == false
-return nil
-end
-end
+if won?(board)
+  return board[winners[0]]
+else
+ return nil
+ end
+end 
