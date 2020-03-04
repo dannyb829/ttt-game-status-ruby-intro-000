@@ -40,12 +40,12 @@ def over?(board)
 end
 
 def winner(board)
-binding.pry
-    if won?(board) ["X","X","X"]
-      return "X"
-    elsif won?(board) == ["O","O","O"]
-      return "O"
-    else
-      return nil
-  end
+winners = won?(board)
+if board[winners[0]] == "X"
+return "X"
+elsif board[winners[0]] == "O"
+return "O"
+else won?(board) == false
+return nil
+end
 end
